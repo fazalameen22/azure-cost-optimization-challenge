@@ -42,21 +42,22 @@ Propose a detailed solution to optimize costs while ensuring:
 
 
 ### 3. Implementation (Pseudocode)
+
+```python
 def archive_old_records():
-for record in cosmos_db.get_records_older_than(months=3):
-blob_storage.save(record.id, record.data)
-cosmos_db.mark_record_as_archived(record.id)
-# Delete or remove large data after ensuring backup exists
+    for record in cosmos_db.get_records_older_than(months=3):
+        blob_storage.save(record.id, record.data)
+        cosmos_db.mark_record_as_archived(record.id)
+        # Delete or remove large data after ensuring backup exists
 
 def get_billing_record(record_id):
-record = cosmos_db.get(record_id)
-if record and not record.archived:
-return record.data
-elif record and record.archived:
-return blob_storage.get(record_id)
-else:
-return None
-
+    record = cosmos_db.get(record_id)
+    if record and not record.archived:
+        return record.data
+    elif record and record.archived:
+        return blob_storage.get(record_id)
+    else:
+        return None
 
 ### 4. Benefits
 
