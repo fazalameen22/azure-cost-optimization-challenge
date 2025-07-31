@@ -74,7 +74,4 @@ return None
 
 ---
 
-## AI Conversation
-
-See `AI_CONVERSATION.md` in this repo for all AI interactions used in crafting this solution.
 
