@@ -38,7 +38,7 @@ Propose a detailed solution to optimize costs while ensuring:
 - **No Data Loss, No Downtime:** Data migrations are validated before deleting from Cosmos DB.
 
 ### 2. Architecture Diagram
-
+![architecture](architecture.png)
 
 
 ### 3. Implementation (Pseudocode)
